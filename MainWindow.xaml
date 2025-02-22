@@ -43,54 +43,54 @@
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
 
-        <TextBlock Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="3" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Red" FontWeight="Bold" FontSize="20" >Eingabe ungültig</TextBlock>
+        <TextBlock Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="3" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FFCA1818" FontSize="20" Name="txtInvalid" FontWeight="Bold">Eingabe ungültig</TextBlock>
 
-        <TextBlock Grid.Row="1" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Center">SPS Wert</TextBlock>
-        <TextBlock Grid.Row="1" Grid.Column="5" VerticalAlignment="Center" HorizontalAlignment="Center">Analogwert</TextBlock>
-        <TextBlock Grid.Row="1" Grid.Column="7" VerticalAlignment="Center" HorizontalAlignment="Center">Realer Wert</TextBlock>
+        <TextBlock Grid.Row="1" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold">SPS Wert</TextBlock>
+        <TextBlock Grid.Row="1" Grid.Column="5" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold">Analogwert</TextBlock>
+        <TextBlock Grid.Row="1" Grid.Column="7" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold">Realer Wert</TextBlock>
        
-        <TextBlock Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">Einheit</TextBlock>
+        <TextBlock Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold">Einheit</TextBlock>
         <TextBlock Grid.Row="3" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Center">-</TextBlock>
         <TextBox Grid.Row="3" Grid.Column="5" VerticalAlignment="Center" HorizontalAlignment="Center" MinWidth="100" Name="txtBoxEinheitAnalog" HorizontalContentAlignment="Center" LostFocus="AnalogWert_lostFocus">mA</TextBox>
         <TextBox Grid.Row="3" Grid.Column="7" VerticalAlignment="Center" HorizontalAlignment="Center" MinWidth="100" Name="txtBoxEinheitReal" HorizontalContentAlignment="Center" LostFocus="RealerWert_lostFocus">V</TextBox>
 
-        <TextBlock Grid.Row="5" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">Minimaler Wert</TextBlock>
+        <TextBlock Grid.Row="5" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold">Minimaler Wert</TextBlock>
         <TextBox Grid.Row="5" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Center" MinWidth="100" Name="txtBoxMinWertSps" HorizontalContentAlignment="Right" LostFocus="SpsWert_lostFocus">0</TextBox>
         <TextBox Grid.Row="5" Grid.Column="5" VerticalAlignment="Center" HorizontalAlignment="Center" MinWidth="100" Name="txtBoxMinWertAnalog" HorizontalContentAlignment="Right" LostFocus="AnalogWert_lostFocus">4</TextBox>
         <TextBox Grid.Row="5" Grid.Column="7" VerticalAlignment="Center" HorizontalAlignment="Center" MinWidth="100" Name="txtBoxMinWertReal" HorizontalContentAlignment="Right" LostFocus="RealerWert_lostFocus">0</TextBox>
 
-        <TextBlock Grid.Row="7" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">Maximaler Wert</TextBlock>
+        <TextBlock Grid.Row="7" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold">Maximaler Wert</TextBlock>
         <TextBox Grid.Row="7" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Center" MinWidth="100" Name="txtBoxMaxWertSps" HorizontalContentAlignment="Right" LostFocus="SpsWert_lostFocus">32767</TextBox>
         <TextBox Grid.Row="7" Grid.Column="5" VerticalAlignment="Center" HorizontalAlignment="Center" MinWidth="100" Name="txtBoxMaxWertAnalog" HorizontalContentAlignment="Right" LostFocus="AnalogWert_lostFocus">20</TextBox>
         <TextBox Grid.Row="7" Grid.Column="7" VerticalAlignment="Center" HorizontalAlignment="Center" MinWidth="100" Name="txtBoxMaxWertReal" HorizontalContentAlignment="Right" LostFocus="RealerWert_lostFocus">24</TextBox>
 
-        <TextBlock Grid.Row="9" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">Messwert</TextBlock>
+        <TextBlock Grid.Row="9" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold">Messwert</TextBlock>
         <TextBox Grid.Row="9" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Center" MinWidth="100" Name="txtBoxMesswertSps" HorizontalContentAlignment="Right" LostFocus="SpsWert_lostFocus">10000</TextBox>
         <TextBox Grid.Row="9" Grid.Column="5" VerticalAlignment="Center" HorizontalAlignment="Center" MinWidth="100" Name="txtBoxMesswertAnalog" HorizontalContentAlignment="Right" LostFocus="AnalogWert_lostFocus">10</TextBox>
         <TextBox Grid.Row="9" Grid.Column="7" VerticalAlignment="Center" HorizontalAlignment="Center" MinWidth="100" Name="txtBoxMesswertReal" HorizontalContentAlignment="Right" LostFocus="RealerWert_lostFocus">10</TextBox>
 
-        <TextBlock Grid.Row="11" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">Faktor</TextBlock>
-        <TextBlock Grid.Row="11" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Center" Name="txtFaktorSps">?</TextBlock>
-        <TextBlock Grid.Row="11" Grid.Column="5" VerticalAlignment="Center" HorizontalAlignment="Center" Name="txtFaktorAnalog">?</TextBlock>
-        <TextBlock Grid.Row="11" Grid.Column="7" VerticalAlignment="Center" HorizontalAlignment="Center" Name="txtFaktorReal">?</TextBlock>
+        <TextBlock Grid.Row="11" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold">Faktor</TextBlock>
+        <TextBlock Grid.Row="11" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Center" Name="txtBlockFaktorSps">?</TextBlock>
+        <TextBlock Grid.Row="11" Grid.Column="5" VerticalAlignment="Center" HorizontalAlignment="Center" Name="txtBlockFaktorAnalog">?</TextBlock>
+        <TextBlock Grid.Row="11" Grid.Column="7" VerticalAlignment="Center" HorizontalAlignment="Center" Name="txtBlockFaktorReal">?</TextBlock>
 
         <Separator Grid.Row="12" Grid.Column="1" Grid.ColumnSpan="7" VerticalAlignment="Center"/>
-        <TextBlock Grid.Row="13" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">Messwert</TextBlock>
+        <TextBlock Grid.Row="13" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold">Messwert</TextBlock>
         <TextBlock Grid.Row="13" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Center">entspricht</TextBlock>
 
-        <TextBlock Grid.Row="15" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">SPS Wert</TextBlock>
-        <TextBlock Grid.Row="15" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Center" Name="txtSpsSps">-</TextBlock>
-        <TextBlock Grid.Row="15" Grid.Column="5" VerticalAlignment="Center" HorizontalAlignment="Center" Name="txtSpsAnalog">?</TextBlock>
-        <TextBlock Grid.Row="15" Grid.Column="7" VerticalAlignment="Center" HorizontalAlignment="Center" Name="txtSpsReal">?</TextBlock>
+        <TextBlock Grid.Row="15" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold">SPS Wert</TextBlock>
+        <TextBlock Grid.Row="15" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Center" Name="txtBlockSpsSps">-</TextBlock>
+        <TextBlock Grid.Row="15" Grid.Column="5" VerticalAlignment="Center" HorizontalAlignment="Center" Name="txtBlockSpsAnalog">?</TextBlock>
+        <TextBlock Grid.Row="15" Grid.Column="7" VerticalAlignment="Center" HorizontalAlignment="Center" Name="txtBlockSpsReal">?</TextBlock>
 
-        <TextBlock Grid.Row="17" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">Analogwert</TextBlock>
-        <TextBlock Grid.Row="17" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Center" Name="txtAnalogSps">?</TextBlock>
-        <TextBlock Grid.Row="17" Grid.Column="5" VerticalAlignment="Center" HorizontalAlignment="Center" Name="txtAnalogAnalog">-</TextBlock>
-        <TextBlock Grid.Row="17" Grid.Column="7" VerticalAlignment="Center" HorizontalAlignment="Center" Name="txtAnalogReal">?</TextBlock>
+        <TextBlock Grid.Row="17" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold">Analogwert</TextBlock>
+        <TextBlock Grid.Row="17" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Center" Name="txtBlockAnalogSps">?</TextBlock>
+        <TextBlock Grid.Row="17" Grid.Column="5" VerticalAlignment="Center" HorizontalAlignment="Center" Name="txtBlockAnalogAnalog">-</TextBlock>
+        <TextBlock Grid.Row="17" Grid.Column="7" VerticalAlignment="Center" HorizontalAlignment="Center" Name="txtBlockAnalogReal">?</TextBlock>
 
-        <TextBlock Grid.Row="19" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">Realer Wert</TextBlock>
-        <TextBlock Grid.Row="19" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Center" Name="txtRealSps">?</TextBlock>
-        <TextBlock Grid.Row="19" Grid.Column="5" VerticalAlignment="Center" HorizontalAlignment="Center" Name="txtRealAnalog">?</TextBlock>
-        <TextBlock Grid.Row="19" Grid.Column="7" VerticalAlignment="Center" HorizontalAlignment="Center" Name="txtRealReal">-</TextBlock>
+        <TextBlock Grid.Row="19" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold">Realer Wert</TextBlock>
+        <TextBlock Grid.Row="19" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Center" Name="txtBlockRealSps">?</TextBlock>
+        <TextBlock Grid.Row="19" Grid.Column="5" VerticalAlignment="Center" HorizontalAlignment="Center" Name="txtBlockRealAnalog">?</TextBlock>
+        <TextBlock Grid.Row="19" Grid.Column="7" VerticalAlignment="Center" HorizontalAlignment="Center" Name="txtBlockRealReal">-</TextBlock>
     </Grid>
 </Window>
