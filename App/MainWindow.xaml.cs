@@ -15,48 +15,48 @@ public partial class MainWindow : Window
         CalcFactor(txtBoxMinWertSps, txtBoxMaxWertSps, txtBoxMesswertSps, txtBlockFaktorSps, "SPS", _factorSps);
         CalcFactor(txtBoxMinWertAnalog, txtBoxMaxWertAnalog, txtBoxMesswertAnalog, txtBlockFaktorAnalog, "Analog", _factorAnalog);
         CalcFactor(txtBoxMinWertReal, txtBoxMaxWertReal, txtBoxMesswertReal, txtBlockFaktorReal, "Real", _factorRealWorld);
-        CalcValue(txtBoxMinWertAnalog, txtBoxMaxWertAnalog, txtBlockFaktorSps, txtBoxEinheitAnalog.Text, txtBlockSpsAnalog, "Analog", "SPS");    // SPS/Analog
-        CalcValue(txtBoxMinWertReal, txtBoxMaxWertReal, txtBlockFaktorSps, txtBoxEinheitReal.Text, txtBlockSpsReal, "Analog", "SPS");            // SPS/Real
-        CalcValue(txtBoxMinWertSps, txtBoxMaxWertSps, txtBlockFaktorAnalog, "", txtBlockAnalogSps, "Analog", "SPS");                             // Analog/SPS
-        CalcValue(txtBoxMinWertReal, txtBoxMaxWertReal, txtBlockFaktorAnalog, txtBoxEinheitReal.Text, txtBlockAnalogReal, "Analog", "SPS");      // Analog/Real
-        CalcValue(txtBoxMinWertSps, txtBoxMaxWertSps, txtBlockFaktorReal, "", txtBlockRealSps, "Analog", "SPS");                                 // Real/SPS
-        CalcValue(txtBoxMinWertAnalog, txtBoxMaxWertAnalog, txtBlockFaktorReal, txtBoxEinheitAnalog.Text, txtBlockRealAnalog, "Analog", "SPS");  // Real/Analog
+        CalcValue(txtBoxMinWertAnalog, txtBoxMaxWertAnalog, txtBlockFaktorSps, txtBoxEinheitAnalog.Text, txtBlockSpsAnalog, "Analog", "SPS", false);    // SPS/Analog
+        CalcValue(txtBoxMinWertReal, txtBoxMaxWertReal, txtBlockFaktorSps, txtBoxEinheitReal.Text, txtBlockSpsReal, "Analog", "SPS", false);            // SPS/Real
+        CalcValue(txtBoxMinWertSps, txtBoxMaxWertSps, txtBlockFaktorAnalog, "", txtBlockAnalogSps, "Analog", "SPS", true);                              // Analog/SPS
+        CalcValue(txtBoxMinWertReal, txtBoxMaxWertReal, txtBlockFaktorAnalog, txtBoxEinheitReal.Text, txtBlockAnalogReal, "Analog", "SPS", false);      // Analog/Real
+        CalcValue(txtBoxMinWertSps, txtBoxMaxWertSps, txtBlockFaktorReal, "", txtBlockRealSps, "Analog", "SPS", true);                                  // Real/SPS
+        CalcValue(txtBoxMinWertAnalog, txtBoxMaxWertAnalog, txtBlockFaktorReal, txtBoxEinheitAnalog.Text, txtBlockRealAnalog, "Analog", "SPS", false);  // Real/Analog
         CheckInputError();
     }
 
     private void SpsWert_lostFocus(object sender, RoutedEventArgs e)
     {
         CalcFactor(txtBoxMinWertSps, txtBoxMaxWertSps, txtBoxMesswertSps, txtBlockFaktorSps, "SPS", _factorSps);
-        CalcValue(txtBoxMinWertAnalog, txtBoxMaxWertAnalog, txtBlockFaktorSps, txtBoxEinheitAnalog.Text, txtBlockSpsAnalog, "Analog", "SPS");    // SPS/Analog
-        CalcValue(txtBoxMinWertReal, txtBoxMaxWertReal, txtBlockFaktorSps, txtBoxEinheitReal.Text, txtBlockSpsReal, "Analog", "SPS");            // SPS/Real
-        CalcValue(txtBoxMinWertSps, txtBoxMaxWertSps, txtBlockFaktorAnalog, "", txtBlockAnalogSps, "Analog", "SPS");                             // Analog/SPS
-        CalcValue(txtBoxMinWertReal, txtBoxMaxWertReal, txtBlockFaktorAnalog, txtBoxEinheitReal.Text, txtBlockAnalogReal, "Analog", "SPS");      // Analog/Real
-        CalcValue(txtBoxMinWertSps, txtBoxMaxWertSps, txtBlockFaktorReal, "", txtBlockRealSps, "Analog", "SPS");                                 // Real/SPS
-        CalcValue(txtBoxMinWertAnalog, txtBoxMaxWertAnalog, txtBlockFaktorReal, txtBoxEinheitAnalog.Text, txtBlockRealAnalog, "Analog", "SPS");  // Real/Analog
+        CalcValue(txtBoxMinWertAnalog, txtBoxMaxWertAnalog, txtBlockFaktorSps, txtBoxEinheitAnalog.Text, txtBlockSpsAnalog, "Analog", "SPS", false);    // SPS/Analog
+        CalcValue(txtBoxMinWertReal, txtBoxMaxWertReal, txtBlockFaktorSps, txtBoxEinheitReal.Text, txtBlockSpsReal, "Analog", "SPS", false);            // SPS/Real
+        CalcValue(txtBoxMinWertSps, txtBoxMaxWertSps, txtBlockFaktorAnalog, "", txtBlockAnalogSps, "Analog", "SPS", true);                              // Analog/SPS
+        CalcValue(txtBoxMinWertReal, txtBoxMaxWertReal, txtBlockFaktorAnalog, txtBoxEinheitReal.Text, txtBlockAnalogReal, "Analog", "SPS", false);      // Analog/Real
+        CalcValue(txtBoxMinWertSps, txtBoxMaxWertSps, txtBlockFaktorReal, "", txtBlockRealSps, "Analog", "SPS", true);                                  // Real/SPS
+        CalcValue(txtBoxMinWertAnalog, txtBoxMaxWertAnalog, txtBlockFaktorReal, txtBoxEinheitAnalog.Text, txtBlockRealAnalog, "Analog", "SPS", false);  // Real/Analog
         CheckInputError();
     }
 
     private void AnalogWert_lostFocus(object sender, RoutedEventArgs e)
     {
         CalcFactor(txtBoxMinWertAnalog, txtBoxMaxWertAnalog, txtBoxMesswertAnalog, txtBlockFaktorAnalog, "Analog", _factorAnalog);
-        CalcValue(txtBoxMinWertAnalog, txtBoxMaxWertAnalog, txtBlockFaktorSps, txtBoxEinheitAnalog.Text, txtBlockSpsAnalog, "Analog", "SPS");    // SPS/Analog
-        CalcValue(txtBoxMinWertReal, txtBoxMaxWertReal, txtBlockFaktorSps, txtBoxEinheitReal.Text, txtBlockSpsReal, "Analog", "SPS");            // SPS/Real
-        CalcValue(txtBoxMinWertSps, txtBoxMaxWertSps, txtBlockFaktorAnalog, "", txtBlockAnalogSps, "Analog", "SPS");                             // Analog/SPS
-        CalcValue(txtBoxMinWertReal, txtBoxMaxWertReal, txtBlockFaktorAnalog, txtBoxEinheitReal.Text, txtBlockAnalogReal, "Analog", "SPS");      // Analog/Real
-        CalcValue(txtBoxMinWertSps, txtBoxMaxWertSps, txtBlockFaktorReal, "", txtBlockRealSps, "Analog", "SPS");                                 // Real/SPS
-        CalcValue(txtBoxMinWertAnalog, txtBoxMaxWertAnalog, txtBlockFaktorReal, txtBoxEinheitAnalog.Text, txtBlockRealAnalog, "Analog", "SPS");  // Real/Analog
+        CalcValue(txtBoxMinWertAnalog, txtBoxMaxWertAnalog, txtBlockFaktorSps, txtBoxEinheitAnalog.Text, txtBlockSpsAnalog, "Analog", "SPS", false);    // SPS/Analog
+        CalcValue(txtBoxMinWertReal, txtBoxMaxWertReal, txtBlockFaktorSps, txtBoxEinheitReal.Text, txtBlockSpsReal, "Analog", "SPS", false);            // SPS/Real
+        CalcValue(txtBoxMinWertSps, txtBoxMaxWertSps, txtBlockFaktorAnalog, "", txtBlockAnalogSps, "Analog", "SPS", true);                              // Analog/SPS
+        CalcValue(txtBoxMinWertReal, txtBoxMaxWertReal, txtBlockFaktorAnalog, txtBoxEinheitReal.Text, txtBlockAnalogReal, "Analog", "SPS", false);      // Analog/Real
+        CalcValue(txtBoxMinWertSps, txtBoxMaxWertSps, txtBlockFaktorReal, "", txtBlockRealSps, "Analog", "SPS", true);                                  // Real/SPS
+        CalcValue(txtBoxMinWertAnalog, txtBoxMaxWertAnalog, txtBlockFaktorReal, txtBoxEinheitAnalog.Text, txtBlockRealAnalog, "Analog", "SPS", false);  // Real/Analog
         CheckInputError();
     }
 
     private void RealerWert_lostFocus(object sender, RoutedEventArgs e)
     {
         CalcFactor(txtBoxMinWertReal, txtBoxMaxWertReal, txtBoxMesswertReal, txtBlockFaktorReal, "Real", _factorRealWorld);
-        CalcValue(txtBoxMinWertAnalog, txtBoxMaxWertAnalog, txtBlockFaktorSps, txtBoxEinheitAnalog.Text, txtBlockSpsAnalog, "Analog", "SPS");    // SPS/Analog
-        CalcValue(txtBoxMinWertReal, txtBoxMaxWertReal, txtBlockFaktorSps, txtBoxEinheitReal.Text, txtBlockSpsReal, "Analog", "SPS");            // SPS/Real
-        CalcValue(txtBoxMinWertSps, txtBoxMaxWertSps, txtBlockFaktorAnalog, "", txtBlockAnalogSps, "Analog", "SPS");                             // Analog/SPS
-        CalcValue(txtBoxMinWertReal, txtBoxMaxWertReal, txtBlockFaktorAnalog, txtBoxEinheitReal.Text, txtBlockAnalogReal, "Analog", "SPS");      // Analog/Real
-        CalcValue(txtBoxMinWertSps, txtBoxMaxWertSps, txtBlockFaktorReal, "", txtBlockRealSps, "Analog", "SPS");                                 // Real/SPS
-        CalcValue(txtBoxMinWertAnalog, txtBoxMaxWertAnalog, txtBlockFaktorReal, txtBoxEinheitAnalog.Text, txtBlockRealAnalog, "Analog", "SPS");  // Real/Analog
+        CalcValue(txtBoxMinWertAnalog, txtBoxMaxWertAnalog, txtBlockFaktorSps, txtBoxEinheitAnalog.Text, txtBlockSpsAnalog, "Analog", "SPS", false);    // SPS/Analog
+        CalcValue(txtBoxMinWertReal, txtBoxMaxWertReal, txtBlockFaktorSps, txtBoxEinheitReal.Text, txtBlockSpsReal, "Analog", "SPS", false);            // SPS/Real
+        CalcValue(txtBoxMinWertSps, txtBoxMaxWertSps, txtBlockFaktorAnalog, "", txtBlockAnalogSps, "Analog", "SPS", true);                              // Analog/SPS
+        CalcValue(txtBoxMinWertReal, txtBoxMaxWertReal, txtBlockFaktorAnalog, txtBoxEinheitReal.Text, txtBlockAnalogReal, "Analog", "SPS", false);      // Analog/Real
+        CalcValue(txtBoxMinWertSps, txtBoxMaxWertSps, txtBlockFaktorReal, "", txtBlockRealSps, "Analog", "SPS", true);                                  // Real/SPS
+        CalcValue(txtBoxMinWertAnalog, txtBoxMaxWertAnalog, txtBlockFaktorReal, txtBoxEinheitAnalog.Text, txtBlockRealAnalog, "Analog", "SPS", false);  // Real/Analog
         CheckInputError();
     }
 
@@ -88,7 +88,7 @@ public partial class MainWindow : Window
         
     }
 
-    private static void CalcValue(TextBox txtBoxMinRange, TextBox txtBoxMaxRange, TextBlock txtBlockFactor, string unit, TextBlock txtBlockOutput, string categoryRange, string categoryFactor)
+    private static void CalcValue(TextBox txtBoxMinRange, TextBox txtBoxMaxRange, TextBlock txtBlockFactor, string unit, TextBlock txtBlockOutput, string categoryRange, string categoryFactor, bool outputInt)
     {
         try
         {
@@ -107,13 +107,21 @@ public partial class MainWindow : Window
 
             value = (factor * (maxRange - minRange)) + minRange;
 
-            if (string.IsNullOrEmpty(unit))
+            if (string.IsNullOrEmpty(unit) && !outputInt)
             {
-                txtBlockOutput.Text = string.Format($"{value:N2}");
+                txtBlockOutput.Text = string.Format($"{value:N2}");         // no unit and float
+            }
+            else if (string.IsNullOrEmpty(unit) && outputInt)
+            {   
+                txtBlockOutput.Text = string.Format($"{(int)value}");       // no unit and int
+            }
+            else if (!outputInt)
+            {
+                txtBlockOutput.Text = string.Format($"{value:N2} {unit}");  // unit and float
             }
             else
             {
-                txtBlockOutput.Text = string.Format($"{value:N2} {unit}");
+                txtBlockOutput.Text = string.Format($"{(int)value} {unit}");  // unit and int
             }
         }
         catch
